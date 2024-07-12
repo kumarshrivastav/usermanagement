@@ -1,0 +1,11 @@
+import axios from 'axios'
+export const signin=(data)=>axios.post("/api/users/signin",data)
+export const signup=(data)=>axios.post("/api/users/signup",data)
+export const update=(data)=>axios.put("/api/users/update",data)
+export const logout=()=>axios.get("/api/users/logout")
+export const getusers=(data)=>axios.get(`/api/users/getusers?${data}`)
+export const updateuser=(data,id)=>axios.put(`/api/users/updateuser/${id}`,data)
+export const deleteuser=(userId)=>axios.delete(`/api/users/deleteuser/${userId}`)
+export const updateuserbyadmin=(data,userId)=>axios.put(`/api/users/updateuserbyadmin/${userId}`,data)
+export const getuser=(userId)=>axios.get(`/api/users/getuser/${userId}`)
+export const adduserbyadmin=(data)=>axios.post("/api/users/adduserbyadmin",data)
